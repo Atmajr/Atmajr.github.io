@@ -1,6 +1,6 @@
-name: Solar Theme
+name: Ack-attack
 url: http://blog.justinacker.com
-description: A stylish blog using the Solarized color palette
+description: Musings on technology, development and gaming by Justin Acker
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
