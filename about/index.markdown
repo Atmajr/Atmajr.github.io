@@ -3,9 +3,9 @@ layout: default
 title: About
 ---
 
-This is where you would but a short bio, and/or a description of your site. It also serves as an example of how to set up a standalone page. For example:
+<img src="/images/justin.jpg" class="right" />
+**Justin Acker** is a Brooklyn-based training coordinator, web dev., and hopeful indie game designer. By day, he codes and supports medical software. By night, he designs and researches independent videogames. By later at night - if he's been very, very good - he actually gets to play those videogames. When he has time, he writes blog posts about technology, coding, and videogame design and development.
 
-<img src="/images/shakespeare.png" class="right" />
-**William Shakespeare** (26 April 1564 – 23 April 1616) was an English poet and playwright, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the "Bard of Avon". His extant works, including some collaborations, consist of about 38 plays, 154 sonnets, two long narrative poems, and a few other verses, the authorship of some of which is uncertain. His plays have been translated into every major living language and are performed more often than those of any other playwright.
+Justin has had about a million jobs in a thousand different industries, and will gladly tell you all about them for the bargain-basement price of a good draft beer.
 
-Shakespeare was born and brought up in Stratford-upon-Avon. At the age of 18, he married Anne Hathaway—no, not *that* Anne Hathaway—with whom he had three children.
+He is perpetually available for freelance and consulting work, and always entertaining offers for full-time employment in the gaming sector.
