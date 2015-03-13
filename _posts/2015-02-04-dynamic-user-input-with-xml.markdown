@@ -1,13 +1,8 @@
 \---  
 layout : post
 
-title : Dynamic user input forms with XML in C\# - Part 1
-
-tags :  
-- C\#  
-- XML  
+title : Dynamic user input forms with XML in C\# - Part 1  
 ---  
-  
 When I started coding in medical software, one of my first major projects was to
 create an online patient intake form for doctor's offices. While this may sound
 simple, for someone who had basically no experience with server-client
