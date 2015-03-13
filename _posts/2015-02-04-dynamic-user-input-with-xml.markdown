@@ -1,9 +1,9 @@
 \---  
-layout: post
+layout : post
 
-title: Dynamic user input forms with XML in C\# - Part 1
+title : Dynamic user input forms with XML in C\# - Part 1
 
-tags:  
+tags :  
 - C\#  
 - XML  
 ---  
