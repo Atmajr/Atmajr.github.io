@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic User Input with XML in C\# - Part 1
+title: Dynamic User Input with XML in C# - Part 1
 categories: dev code C# XML
 tags:
 - XML
