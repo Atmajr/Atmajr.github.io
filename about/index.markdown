@@ -3,8 +3,7 @@ layout: default
 title: About
 ...
 
-[img src="/images/justin.jpg" class="right" height="140" width="100" /](<img
-src="/images/justin.jpg" class="right" height="140" width="100" />) **Justin
+<img src="/images/justin.jpg" class="right" height="140" width="100"> **Justin
 Acker** is a Brooklyn-based training coordinator, web developer, and hopefully
 one day a game creator. By day, he codes and supports medical software. By
 night, he designs and researches independent video games. By later at night - if
