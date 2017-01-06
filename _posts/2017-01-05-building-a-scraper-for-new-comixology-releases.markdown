@@ -24,12 +24,14 @@ The first minor hurdle came with the formatting of some of the text on the page.
 t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tDavid Mazzucchelli\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tGerry Ta
 loc\t\t\t\t\t\t\t\n\t\t\t\t\t\t
 ```
+<br>
 
 Obviously, that's no good for a program that's designed to be human readable. I needed to remove these non-characters, and I also wanted a format that would differentiate names, no matter how many different contributors had worked on a specific book. I ended up using the following line:
 
 ```ruby
 issue_hash[:artist] = page.css("h2[title='Art by']").text.gsub("\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n", ", ").gsub("\t", "").gsub("\n", "").split.join(" ")
 ```
+<br>
 
 Essentially, what we do here is find a very specific string that Comixology uses to achieve newlines and position between contributors and replace it with a comma and a space. Then, we find every other tab and newline and remove them outright. Finally, we split the string on space characters and then rejoin. We do this cleanse our strings of repeated spaces, since some strings within the Comixology site use long strings of spaces for positioning. This may seem like a roundabout method of achieving this (versus something like .squeeze), but as it turns out, this is one of [the most efficient methods](http://stackoverflow.com/questions/4907068/how-do-i-remove-repeated-spaces-in-a-string) for small strings.
 
@@ -45,6 +47,7 @@ parse_path = "https://www.comixology.com/" + issue_uri.normalized_path
 page = Nokogiri::HTML(open(parse_path))
 ```
 
+<br>
 ### Future plans
 
 The Comixology New Release Extractor is now at a point where I feel comfortable submitting it as a project. However, I would not feel comfortable submitting it to the general public or attempting to publish it as a gem. There are a few changes that need to be made before that can be considered.
