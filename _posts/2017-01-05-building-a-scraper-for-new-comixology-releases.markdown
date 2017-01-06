@@ -48,7 +48,7 @@ page = Nokogiri::HTML(open(parse_path))
 ```
 
 <br>
-### Future plans
+###Future plans
 
 The Comixology New Release Extractor is now at a point where I feel comfortable submitting it as a project. However, I would not feel comfortable submitting it to the general public or attempting to publish it as a gem. There are a few changes that need to be made before that can be considered.
 
