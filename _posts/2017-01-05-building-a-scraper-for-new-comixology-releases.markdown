@@ -25,7 +25,7 @@ t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tDavid Mazzucchelli\t\t\t\t\t\t\
 loc\t\t\t\t\t\t\t\n\t\t\t\t\t\t
 ```
 
-Obviously, that's no good for a program that's designed to be human readbale. I needed to remove these non-characters, and I also wanted a format that would differentiate names, no matter how many different contributors had worked on a specific book. I ended up using the following line:
+Obviously, that's no good for a program that's designed to be human readable. I needed to remove these non-characters, and I also wanted a format that would differentiate names, no matter how many different contributors had worked on a specific book. I ended up using the following line:
 
 ```ruby
 issue_hash[:artist] = page.css("h2[title='Art by']").text.gsub("\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n", ", ").gsub("\t", "").gsub("\n", "").split.join(" ")
@@ -35,7 +35,7 @@ Essentially, what we do here is find a very specific string that Comixology uses
 
 ### Foreign characters in URLs
 
-The next foible had to do with URL parsing. Scraping Comixology's main site was working just fine, but I found the app failing when attempting to drill down into some of the issues on the site. Upon further investigation, I found these issues were in foreign languages (French, Italian, etc) and the URLs referring specifically to them included not unicode characters. These charcaters are not supported by Ruby's URI implementation.
+The next foible had to do with URL parsing. Scraping Comixology's main site was working just fine, but I found the app failing when attempting to drill down into some of the issues on the site. Upon further investigation, I found these issues were in foreign languages (French, Italian, etc) and the URLs referring specifically to them included non-unicode characters. These charcaters are not supported by Ruby's URI implementation.
 
 To deal with this issue, I chose to implement the [Addressable gem](https://github.com/sporkmonger/addressable). Addressable provides many functions for dealing with URIs more robustly than Ruby can natively, but in this case what I wanted was the ability to normalize my path, replacing the foreign characters with their percent-encoded equivalent. See below:
 
@@ -49,17 +49,17 @@ page = Nokogiri::HTML(open(parse_path))
 
 The Comixology New Release Extractor is now at a point where I feel comfortable submitting it as a project. However, I would not feel comfortable submitting it to the general public or attempting to publish it as a gem. There are a few changes that need to be made before that can be considered.
 
-#### Formatting and pagination
+**Formatting and pagination**
 
 Right now, user output is pretty good, if ascetic, at the single issue level. But the full list level is a different story. In its current format, the list option returns 188 issues, at one per line. That's a lot for a user to scroll through in a terminal window. I tried [Pager](https://github.com/sferik/pager), but it wasn't very user friendly. One option might be to use [Command Line Reporter](https://github.com/wbailey/command_line_reporter), but another possibility would be to split the lines up via nested arrays and build the paging in myself.
 
 I'd also like to begin extracting the release dates and optionally grouping comic releases beneath them, since the new release page displays releases from multiple dates.
 
-#### Reading ALL comic releases
+**Reading ALL comic releases**
 
 Comixology's release page pages out the releases at a maximum of 12 per date. I believe we could read all of the pages from each date by reading the hrefs of the buttons and then checking the CSS of the page they lead to, but that will be both network intensive (slow) and involved to implement.
 
-#### Making the app into a usable gem
+**Making the app into a usable gem**
 
 Once all the above are completed, I'll consider this a possibility.
 
