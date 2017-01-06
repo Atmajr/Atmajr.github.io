@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic User Input with XML in C# - Part 1
+title: Dynamic User Input with XML in C#
 categories: dev code C# XML
 tags:
 - XML
@@ -49,7 +49,3 @@ synergized well
 * some of our coders speak languages other than English and found XML simpler
 than JSON, etc.  
 * XML work well with MSSQL Server and can be queried directly
-
-In the following blog posts, I'll describe some of the difficulties and choices
-inherent in using this framework for an implementation like this, and how we
-chose to deal with it.
