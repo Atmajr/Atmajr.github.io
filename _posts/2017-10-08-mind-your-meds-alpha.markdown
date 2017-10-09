@@ -1,10 +1,10 @@
-###Helping patients remember their medications
+### Helping patients remember their medications
 
 I've had a concept for a while now for a mobile or mobile-accessible web app to help patients keep track of the medications they take. In addition to a host of other features I'd like to build in eventually, even just a list of the pertinent details of the meds their on would be useful for patients when meeting a new doctor, visiting a new hospital or filling out medical paperwork. 
 
 When tasked to build a CRUD application with account services for my Sinatra final project, I opted to build an alpha version of this application, with an eye toward expanding in the future.
 
-###Technology
+### Technology
 
 Most features required for this app were things I had done before, so there wasn't much to worry about. I used ActiveRecord to handle the SQLite DB for the backend of the site, having two models: 
 
@@ -15,7 +15,7 @@ Sinatra and [rack-flash](https://github.com/nakajima/rack-flash) were used to ha
 
 I thought about writing my own regex to control for validating e-mail address formatting, but in the end I instead went with the [email-validator](https://github.com/balexand/email_validator) gem. You can easily determine e-mail validity by passing the address via `EmailValidator.valid?` which makes things much simpler.
 
-###Conclusion and next steps
+### Conclusion and next steps
 
 In general, this was a fairly straight-forward project. The model interactions were one-way and simple, and because medications are private matters, there was no social aspect or inter-user interaction to worry about. 
 
